@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 動画背景 -->
+    <div class="video-background">
+        <video id="bg-video" autoplay muted playsinline>
+            <source src="../movie/m1.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- メインコンテンツ -->
+    <div class="container">
+        <div class="content">
+            <h1 class="main-title fade-in">
+                <span class="year-2025">2025</span>
+                <span class="arrow">→</span>
+                <span class="year-2026">2026</span>
+            </h1>
+
+            <h2 class="greeting fade-in-delay-1">
+                Happy New Year
+            </h2>
+
+            <p class="message fade-in-delay-2">
+                新しい一年が<br class="sp-only">
+                あなたにとって良い年と<br class="sp-only">
+                なりますように
+            </p>
+
+            <div class="decorative-line fade-in-delay-3"></div>
+
+            <p class="sub-message fade-in-delay-4">
+                May this year bring you joy, success, and endless possibilities
+            </p>
+        </div>
+
+    </div>
+
+    <!-- パーティクルエフェクト -->
+    <canvas id="particles"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
