@@ -1,7 +1,7 @@
 // 動画自動切り替え機能
 const video = document.getElementById('bg-video');
 let currentVideoIndex = 1;
-const totalVideos = 4;
+const totalVideos = 3;
 
 // 動画のスムーズトランジション
 video.style.transition = 'opacity 0.3s ease';
