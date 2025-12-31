@@ -88,47 +88,42 @@ body {
 
 /* タイトル */
 .main-title {
-    font-size: clamp(2.5rem, 8vw, 5rem);
-    font-weight: 700;
-    margin-bottom: 30px;
-    letter-spacing: 0.05em;
+    font-size: clamp(4rem, 15vw, 8rem);
+    font-weight: 900;
+    margin-bottom: 40px;
+    letter-spacing: 0.1em;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.year-2025 {
-    color: #ccc;
-    opacity: 0.6;
-    text-decoration: line-through;
-    animation: fadeOut 2s ease-in-out;
-}
-
-.arrow {
-    color: #ffd700;
-    font-size: clamp(2rem, 6vw, 4rem);
-    animation: slideIn 1.5s ease-out;
 }
 
 .year-2026 {
     background: linear-gradient(135deg, #ffd700, #ffed4e, #ffd700);
+    background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: shimmer 3s infinite, scaleIn 1s ease-out;
-    text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+    animation: shimmer 3s infinite, scaleIn 1.2s ease-out, pulse 2s infinite;
+    filter: drop-shadow(0 0 40px rgba(255, 215, 0, 0.8))
+            drop-shadow(0 0 20px rgba(255, 215, 0, 0.6));
 }
 
 /* グリーティング */
 .greeting {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 300;
-    margin-bottom: 30px;
-    letter-spacing: 0.1em;
-    color: #fff;
-    text-shadow: 0 2px 20px rgba(255, 255, 255, 0.3);
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    font-weight: 600;
+    margin-bottom: 35px;
+    letter-spacing: 0.15em;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0, #ffffff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 4s infinite;
+    filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.7))
+            drop-shadow(0 0 15px rgba(255, 255, 255, 0.5))
+            drop-shadow(0 4px 10px rgba(255, 215, 0, 0.3));
+    text-transform: uppercase;
 }
 
 /* メッセージ */
@@ -170,32 +165,16 @@ body {
     }
 }
 
-@keyframes fadeOut {
-    0%, 50% {
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    60% {
         opacity: 1;
+        transform: scale(1.1);
     }
     100% {
-        opacity: 0.6;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes scaleIn {
-    from {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    to {
         opacity: 1;
         transform: scale(1);
     }
@@ -207,6 +186,15 @@ body {
     }
     50% {
         background-position: 100% 50%;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
     }
 }
 
